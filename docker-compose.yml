@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web:
+    image: er90/webpage
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+  db:
+    image: er90/datenbank
+    ports:
+      - "3306:3306"
